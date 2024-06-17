@@ -16,7 +16,7 @@ Implementation of EvoHDTree and choosing the best Up-sampling methods.
 ## Specific Learning:
 Various up-sampling methods and their impact on dataset, hyperparameter tuning techniques.
 
-##Technical Limitations & Ethical Challenges faced:
+## Technical Limitations & Ethical Challenges faced
 Reducing the time-complexity of the EvoHDTree , finding the optimal upsampling method.
 
 ## License
