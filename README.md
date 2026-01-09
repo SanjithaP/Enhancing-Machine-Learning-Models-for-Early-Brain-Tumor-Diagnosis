@@ -1,22 +1,59 @@
-# Project Title: ANALYSING AND IMPROVISING OF MACHINE LEARNING MODELS FOR EARLY DIAGNOSIS OF BRAIN TUMOUR
+# Brain Tumor Classification using Machine Learning
 
-## Author
-Sanjitha P
+Early diagnosis system for brain tumors using plasma metabolomics and machine learning algorithms.
 
-## Name of the Guide
-Dr. Brindha GR, Assistant Professor-II, School of Computing , SASTRA University
+## Overview
 
-## ABSTRACT
-Brain tumors pose a serious risk since they can cause damage and compression to critical brain regions. They are generally categorized as meningeal tumors (non-malignant) and glioma (malignant). Conventional diagnostic techniques frequently prove laborious, obstructing timely intervention. The goal of this initiative is to use machine learning techniques to accelerate tumor identification. Ten different machine learning models are built and extensively tested using a dataset containing chemical profiles unique to meningeal tumors and gliomas (graded according to severity). These models are: Random Forest (RF), Naive Bayes (NB), Gradient Boosted Trees (GBT), Support Vector Machine (SVM), Logistic Regression (LR), Fast Large Margin (FLM), Deep Learning (DL), Decision Tree (DT), Random Forest (RF), and Evolutionary Heterogeneous Decision Tree (EvoHDTree). After a thorough assessment using performance indicators like Accuracy (ACC) and Area Under the Curve (AUC), and F1-score, the ability of these models to distinguish between people who are healthy and those who have carcinoma is compared. Moreover, the best-performing EvoHDTree model (ACC = 0.9195) is improved using a new preprocessing technique that uses the ADASYN up-sampling algorithm. This improvement produces the final model that has increased accuracy in identifying malignant from non-malignant tumors.
+This project develops a machine learning-based diagnostic system to classify brain tumors (glioma and meningioma) by analyzing 188 metabolites from plasma samples. The system achieves up to 98.5% accuracy using the EvoHDTree algorithm with ADASYN upsampling.
 
-## Specific Contribution:
-Implementation of EvoHDTree and choosing the best Up-sampling methods.
+**Author:** Sanjitha P | **Guide:** Dr. Brindha GR | **Institution:** SASTRA University | **Year:** 2023
 
-## Specific Learning:
-Various up-sampling methods and their impact on dataset, hyperparameter tuning techniques.
+## Key Features
 
-## Technical Limitations & Ethical Challenges faced
-Reducing the time-complexity of the EvoHDTree , finding the optimal upsampling method.
+- **10 ML Models**: Comparison of NB, GLM, LR, FLM, DL, DT, RF, GBT, SVM, and EvoHDTree
+- **Grade-Specific Classification**: Distinguishes glioma grades (I-IV) from healthy controls
+- **Class Imbalance Handling**: ADASYN upsampling for improved performance
+- **Interactive GUI**: Streamlit-based web interface for predictions
+
+## Results
+
+| Classification Task | Accuracy | AUC | F1-Score |
+|---------------------|----------|-----|----------|
+| Glioma Grade IV vs Control | 98.5% | 0.971 | 0.985 |
+| Glioma (I-IV) vs Control | 95.2% | 0.951 | 0.958 |
+| Meningioma vs Control | 87.8% | 0.840 | 0.857 |
+
+**Best Model:** EvoHDTree (Evolutionary Heterogeneous Decision Tree)
+
+## Dataset
+
+- **Source:** Plasma metabolomics data (41598_2023_38243_MOESM2_ESM.xlsr)
+- **Samples:** 95 glioma + 70 meningioma + 71 healthy controls
+- **Features:** 188 metabolites per sample
+
+## Technical Highlights
+
+- **Novel Contribution:** EvoHDTree implementation with ADASYN upsampling
+- **Validation:** Leave-One-Out Cross-Validation
+- **Metrics:** Accuracy, AUC-ROC, F1-score
+- **Visualization:** ROC curves, confusion matrices, class distribution plots
+
+## Future Work
+
+- Integration with larger multi-center datasets
+- Mobile application deployment
+- Real-time prediction capabilities
+- Fusion with medical imaging data
 
 ## License
-This project is licensed under the BSD-3 License. See the [LICENSE](https://github.com/SanjithaP/Enhancing-Machine-Learning-Models-for-Early-Brain-Tumor-Diagnosis/blob/main/LICENSE) file for details.
+
+BSD-3-Clause License - see [LICENSE](LICENSE) file
+
+
+## Reference Paper
+
+Godlewski, A., et al. (2023). "A comparison of different machine-learning techniques for the selection of a panel of metabolites allowing early detection of brain tumors." *Scientific Reports*, 13, 11044. [DOI: 10.1038/s41598-023-38243-1](https://doi.org/10.1038/s41598-023-38243-1)
+
+---
+
+⚠️ **Note:** This is a research prototype. Clinical validation required before deployment.
