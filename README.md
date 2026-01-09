@@ -1,4 +1,4 @@
-# Brain Tumor Classification using Machine Learning
+#  Machine Learning for Brain Tumor Classification
 
 Early diagnosis system for brain tumors using plasma metabolomics and machine learning algorithms.
 
